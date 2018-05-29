@@ -4,7 +4,7 @@
 
     // On crée la connexion à la base de donnée. Je configure $bdd pour que des erreurs SQL lèvent des exceptions
     try {
-        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', 'Btssio');
+        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
         $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
     catch (PDOException $e) {
