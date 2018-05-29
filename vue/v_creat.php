@@ -1,6 +1,6 @@
 ﻿<?php
             try {
-    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     }
         catch (PDOException $e) {
@@ -40,7 +40,7 @@
 <section id="actu">
 <?php
 
-    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //préparation de la requete
     $res=$bdd->prepare('SELECT * FROM lieu');                                           
@@ -109,7 +109,7 @@ $i++;
 <section id="actu">
 <?php
 
-    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //préparation de la requete
     $res=$bdd->prepare('SELECT * FROM type_event');                                           
