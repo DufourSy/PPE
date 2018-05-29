@@ -1,0 +1,55 @@
+#historique{
+	margin-top: 2%;
+	float: left;
+	width: 100%;
+}
+table,tbody,tr{
+	float: left;
+	width: 100%;
+}
+thead{
+}
+td{
+	width: 100em;
+	text-align: center;
+}
+#actu li{
+	color: #575757;
+	text-align: center;
+	list-style: none;
+	float: left;
+	width: 16%;
+}
+#attenc table,tbody,tr{
+	float: left;
+	width: 100%;
+}
+#attenc, #historique_enc{
+	color: #575757;
+}
+#attenc td{
+	width: 100em;
+	text-align: center;
+}
+#attenc li{
+	text-align: center;
+	list-style: none;
+	float: left;
+	width: 11%;
+}
+#historique_enc li{
+	text-align: center;
+	list-style: none;
+	float: left;
+	width: 14%;
+	margin-top: 1px;
+}
+
+#historique_tp li{
+	color: rgb(87,87,87);
+	text-align: center;
+	list-style: none;
+	float: left;
+	width: 11%;
+	margin-top: 1px;
+}
