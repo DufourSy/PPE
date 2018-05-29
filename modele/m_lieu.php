@@ -9,7 +9,7 @@
     if (isset($_POST['id_lieu'])) {
 
             try {
-    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $req = $bdd->prepare('SELECT * FROM user WHERE login = :pseudo');
     $req->execute(array(
