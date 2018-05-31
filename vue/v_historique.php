@@ -1,5 +1,5 @@
 ﻿<?php
-    if(empty($_COOKIE['pseudo'])){
+    if(empty($COOKIE['pseudo'])){
 
 
     try {
