@@ -1,11 +1,6 @@
-#historique{
-	margin-top: 2%;
-	float: left;
-	width: 100%;
-}
 table,tbody,tr{
 	float: left;
-	width: 100%;
+	width: 50%;
 }
 table{
 	margin-bottom: 100px;
@@ -19,7 +14,7 @@ td{
 	text-align: center;
 	list-style: none;
 	float: left;
-	width: 14%;
+	width: 22%;
 }
 #attenc table,tbody,tr{
 	float: left;
@@ -29,7 +24,7 @@ td{
 	color: #575757;
 }
 #attenc td{
-	width: 100em;
+	width: 1em;
 	text-align: center;
 }
 #attenc li{
@@ -38,19 +33,6 @@ td{
 	float: left;
 	width: 11%;
 }
-#historique_enc li{
-	text-align: center;
-	list-style: none;
-	float: left;
-	width: 14%;
-	margin-top: 1px;
-}
-
-#historique_tp li{
-	color: rgb(87,87,87);
-	text-align: center;
-	list-style: none;
-	float: left;
-	width: 11%;
-	margin-top: 1px;
+#valider{
+	width: 100%;
 }

@@ -1,8 +1,9 @@
 <?php
    try {
-        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
+    //$bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $req = $bdd->prepare('SELECT * FROM utilisateurs WHERE Pseudonyme = :pseudo'); //Je récupère les informations de l'utilisateur connecté
+    $req = $bdd->prepare('SELECT * FROM user WHERE login = :pseudo'); //Je récupère les informations de l'utilisateur connecté
     $req->execute(array(
         'pseudo' => $_COOKIE['pseudo'])); // j'utilise le pseudo que j'ai stocké dans les cookies
     $resultat = $req->fetch();
@@ -45,9 +46,10 @@
         <!-- Le menu principal -->
         <nav id="page_menu">
             <ul>
+                <li><a href="?page=home">Home</a></li>
                 <li><a href="?page=creat">Créer un évènement</a></li>
-                <li><a href="?page=apprend">Comment créer un évènement</a></li>
                 <li><a href="?page=all">Nos évènement en cours</a></li>
+                <li><a href="?page=compte">Profil</a></li>
             </ul>
         </nav>
 

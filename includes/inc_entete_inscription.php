@@ -36,8 +36,8 @@
         <!-- Le menu principal -->
         <nav id="page_menu">
             <ul>
+                <li><a href="?page=home">Home</a></li>
                 <li><a href="?page=signin">Devenir Membre</a></li>
-                <li><a href="?page=apprend">Comment créer un évènement</a></li>
                 <li><a href="?page=all">Nos évènement en cours</a></li>
             </ul>
         </nav>

@@ -6,11 +6,11 @@
                     <h2>Menu a remplir</h2>
 
                     <ul>
-                        <li><a href="#">Parieur 1</a></li>
-                        <li><a href="#">Parieur 2</a></li>
-                        <li><a href="#">Parieur 3</a></li>
-                        <li><a href="#">Parieur 4</a></li>
-                        <li><a href="#">Parieur 5</a></li>
+                        <li><a href="#">test a remplir 1</a></li>
+                        <li><a href="#">test a remplir 2</a></li>
+                        <li><a href="#">test a remplir 3</a></li>
+                        <li><a href="#">test a remplir 4</a></li>
+                        <li><a href="#">test a remplir 5</a></li>
                     </ul>
                 </div>
             </aside>

@@ -1,13 +1,4 @@
-﻿<?php
-            try {
-        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
-    $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-        catch (PDOException $e) {
-        die($e->getMessage());
-    }
-?>
-        <!-- le formulaire d'inscription -->
+﻿        <!-- le formulaire d'inscription -->
         <form action="?page=creat" method="POST">
             <h2>Inscription</h2>
             <fieldset>
@@ -38,9 +29,10 @@
             </fieldset>
 
 <section id="actu">
+    <p>choisir un lieu pour l'évènement</p>
 <?php
-
-        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
+    //$bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //préparation de la requete
     $res=$bdd->prepare('SELECT * FROM lieu');                                           
@@ -107,9 +99,11 @@ $i++;
 </section>
 
 <section id="actu">
+    <p>Choisir quel type d'évènement</p>
 <?php
+    //$bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
 
-        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     //préparation de la requete
     $res=$bdd->prepare('SELECT * FROM type_event');                                           

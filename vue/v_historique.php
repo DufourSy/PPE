@@ -3,7 +3,8 @@
 
 
     try {
-        $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
+    //$bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
+    $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
     $bdd->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $req = $bdd->prepare('SELECT * FROM evenement,user,lieu WHERE evenement.id_lieu = lieu.id_lieu and evenement.id_user = user.id_user and evenement.id_user = :id_user');
     $req->execute(array(
@@ -55,6 +56,7 @@
                     <li>Lieu</li>
                     <li>Adresse</li>
                     <li>Nom</li>
+                    <li>Repas x Quantite</li>
                 </td>
             </tr>
         </thead>
@@ -86,15 +88,17 @@
         echo '<li>'.$row['nom'].'</li>';
 
     //préparation de la requete
-    $res=$bdd->prepare('SELECT * FROM commander WHERE id_event='.$row['id_event']);                                           
+    $res=$bdd->prepare('SELECT * FROM commander,nourriture WHERE nourriture.id_nour=commander.id_nour and id_event='.$row['id_event']);                                           
     $res->execute();                                                            
     $nbd=$res->rowCount();                                                                                   
-    $r=$res->fetchAll();    
+    $r=$res->fetch();    
 if(empty($r)){
         echo '<form action="?page=add" method="POST">
         <input type="hidden" name="id_event" value="'.$row['id_event'].'" id="id_event">
         <input type="submit" name="valider" value="Add nourriture" id="valider"/>
         </form>';
+}else{
+    echo '<li>'.$r['designation'].' x '.$r['quantite'];
 }
 
 ?>      </td>
