@@ -1,7 +1,4 @@
 <?php
-    if(empty($COOKIE['pseudo'])){
-
-
     try {
     //$bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
     $bdd = new PDO('mysql:dbname=ppe;host=localhost', 'admin', 'Btssio');
@@ -14,11 +11,6 @@
     catch (PDOException $e) {
         die($e->getMessage());
     }
-   }else{
-        header('Location: ?page=home');
-        exit();
-   }
-
 ?>
 <section id="actu">
         <h2>Historique de mes évènements</h2>

@@ -1,18 +1,4 @@
-<section id="page_main">
-<aside id="left_panel">
-    <div id="live">
-    <h2>Tableau de bord</h2>
-       <ul>
-            <li><a href="?page=compte">Mes informations personnelles</a></li>
-            <li><a href="?page=historique">Historique de mes évènements</a></li>
-        </ul>
-    </div>
-</aside>
-</section>
-
 <?php
-    if(empty($COOKIE['pseudo'])){
-
 
     try {
     //$bdd = new PDO('mysql:dbname=ppe;host=localhost', 'root', '');
@@ -27,12 +13,19 @@
     catch (PDOException $e) {
         die($e->getMessage());
     }
-   }else{
-        header('Location: ?page=home');
-        exit();
-   }
-
 ?>
+
+<section id="page_main">
+<aside id="left_panel">
+    <div id="live">
+    <h2>Tableau de bord</h2>
+       <ul>
+            <li><a href="?page=compte">Mes informations personnelles</a></li>
+            <li><a href="?page=historique">Historique de mes évènements</a></li>
+        </ul>
+    </div>
+</aside>
+</section>
 
 <section id="actu">
         <h2>Mes informations Personnelles</h2>
